@@ -23,7 +23,7 @@ development:
   username: root
   password: <%= ENV['MYSQL_ENV_MYSQL_ROOT_PASSWORD'] %>
 #  socket: /var/lib/mysql/mysql.sock
-  socket: /var/run/mysqld/mysqld.sock
+  #socket: /var/run/mysqld/mysqld.sock
   host: <%= ENV['MYSQL_PORT_3306_TCP_ADDR'] %>
   port: <%= ENV['MYSQL_PORT_3306_TCP_PORT'] %>
 
