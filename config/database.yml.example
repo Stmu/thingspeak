@@ -20,8 +20,8 @@ development:
   reconnect: false
   database: thingspeak_development
   pool: 5
-  username: thing
-  password: "speak"
+  username: root
+  password: <%= ENV['MYSQL_ENV_MYSQL_ROOT_PASSWORD'] %>
 #  socket: /var/lib/mysql/mysql.sock
   socket: /var/run/mysqld/mysqld.sock
   host: <%= ENV['MYSQL_PORT_3306_TCP_ADDR'] %>
