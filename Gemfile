@@ -30,6 +30,7 @@ gem 'rack-utf8_sanitizer'
 gem 'newrelic_rpm'
 gem 'actionpack-xml_parser'
 #gem 'activeadmin', :git => "git://github.com/gregbell/active_admin.git"
+gem 'activeadmin', :git => "https://github.com/activeadmin/activeadmin.git"
 gem 'chronic'
 gem 'non-stupid-digest-assets'
 gem 'em-http-request'
