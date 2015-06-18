@@ -29,7 +29,7 @@ gem 'capistrano', '~> 2.15.4'
 gem 'rack-utf8_sanitizer'
 gem 'newrelic_rpm'
 gem 'actionpack-xml_parser'
-gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'activeadmin', :git => "git://github.com/gregbell/active_admin.git"
 gem 'chronic'
 gem 'non-stupid-digest-assets'
 gem 'em-http-request'
