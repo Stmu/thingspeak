@@ -1,0 +1,31 @@
+image: go1.3
+git:
+  path: github.com/drone/drone
+env:
+  - GOROOT=/usr/local/go
+  - PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+script:
+  - sudo add-apt-repository ppa:git-core/ppa 1> /dev/null 2> /dev/null
+  - sudo apt-get update 1> /dev/null 2> /dev/null
+  - sudo apt-get -y install git zip libsqlite3-dev sqlite3 rpm dpkg 1> /dev/null 2> /dev/null
+  - gem install fpm
+  - rbenv rehash
+  - make deps
+  - make test
+  - make test_postgres
+  - make test_mysql
+  - make packages
+services:
+  - postgres
+  - mysql
+notify:
+  email:
+    recipients:
+      - brad@drone.io
+  webhook:
+    urls:
+      - https://webhooks.gitter.im/e/$$GITTER_KEY
+    on_started: false
+    on_success: true
+    on_failure: true
+
