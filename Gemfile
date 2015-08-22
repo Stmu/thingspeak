@@ -3,9 +3,10 @@ source 'http://rubygems.org'
 gem 'rails', '4.2.1'
 gem 'jquery-rails', '3.0.4'
 gem 'rails_autolink'
-gem 'mysql2'
+#gem 'mysql2'
+gem 'pg'
 gem 'devise'
-gem 'twitter_oauth', git: 'git://github.com/moomerman/twitter_oauth.git'
+gem 'twitter_oauth' #, git: 'git://github.com/moomerman/twitter_oauth.git'
 gem 'therubyracer'
 gem 'exception_notification'
 gem 'nested_form'
@@ -23,7 +24,7 @@ gem 'redis'
 gem 'resque-scheduler', '2.3.1', :require => 'resque_scheduler'
 gem 'daemons'
 #gem 'db2fog' (not compatible with Rails 4, see https://github.com/hakanensari/db2fog for Rails 4 version)
-gem 'simplificator-rwebthumb', :git => "git://github.com/simplificator/rwebthumb.git"
+gem 'simplificator-rwebthumb' #, :git => "git://github.com/simplificator/rwebthumb.git"
 gem 'tweetstream'
 gem 'capistrano', '~> 2.15.4'
 gem 'rack-utf8_sanitizer'
@@ -70,4 +71,3 @@ group :test do
   gem 'ZenTest'
   gem 'database_cleaner', '~> 1.2.0'
 end
-
